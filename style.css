@@ -1,0 +1,123 @@
+* {
+  margin: 4;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #d1c6b9;
+}
+#alt {
+  background-color: #f1edea;
+}
+
+@font-face {
+  font-family: "fogtwono5";
+  src: url("fonts/fogtwono5-webfont.woff2") format("woff2");
+}
+#black_line {
+  display: flex;
+  place-content: center;
+}
+#black_line .box0 {
+  width: 99%;
+  height: 2px;
+  margin-top: 0px;
+  background-color: black;
+}
+html {
+  font-size: 62.5%;
+  font-family: "fogtwono5", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+header {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; */
+  position: sticky;
+  top: 0;
+}
+.header {
+  background-color: #f1edea;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  padding-bottom: 4.1px;
+}
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.nav-link:hover {
+  color: #ff9913;
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.nav-menu {
+  margin: 4px;
+  position: fixed;
+  left: -101%;
+  top: 5rem;
+  /* flex-direction: column; */
+  background-color: #f1edea;
+  width: 100%;
+  /* border-radius: 10px; */
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+}
+
+.nav-menu.active {
+  left: 4px;
+}
+
+.nav-item {
+  margin: 2.5rem;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 2.1em;
+}
