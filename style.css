@@ -67,6 +67,8 @@ header {
 }
 .hamburger {
   display: none;
+  font-size: 1.7rem;
+  margin-left: -1rem;
 }
 
 .bar {
@@ -99,9 +101,10 @@ header {
 }
 
 .nav-logo {
-  font-size: 2.1rem;
+  font-size: 1.7rem;
   font-weight: 500;
   color: #000000;
+  margin: -1rem;
 }
 
 .nav-menu {
@@ -149,17 +152,17 @@ styldelen-------------------------------*/
   display: flex;
   place-content: center;
 }
-#gray_line .box0 {
+.box0 {
   width: 99%;
   height: 2px;
   margin-top: 0px;
   background-color: #707070;
 }
 .headline_min {
-  font-size: 20px;
+  font-size: 2.1rem;
 }
 .headline_protfolio {
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 /*--------- mit grid til forsiden i mobil------- */
@@ -171,38 +174,60 @@ styldelen-------------------------------*/
 #section_forside .section_wrapper {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(10, 6rem);
 }
 .arabic_op {
   grid-column: 14/16;
+  grid-row: 1/2;
+  margin: 1rem;
+  padding-left: 0.8rem;
 }
 .headline_min {
-  grid-column: 3/5;
+  grid-column: 4/8;
   grid-row: 1/2;
+  margin: 1rem;
+  /* padding-left: 1.5rem; */
 }
 .headline_protfolio {
-  grid-column: 4/9;
+  grid-column: 5/12;
   grid-row: 1/2;
+  text-align: center;
 }
 .splash_billede {
-  grid-column: 2/15;
-  grid-row: 2/4;
+  grid-column: 1/16;
+  grid-row: 3/4;
 }
 
 .under_headline {
   grid-column: 5/12;
-  grid-row: 3/4;
+  grid-row: 7/8;
   text-align: center;
   font-size: 1.5rem;
-  padding-top: 77px;
+  padding-top: 3rem;
 }
 .arabic_ned {
-  grid-column: 2/3;
+  grid-column: 1/4;
+  grid-row: 8/8;
+  margin: 1rem;
+  padding-top: 2rem;
 }
-#gray_line {
+.box0 {
   grid-column: 1/16;
-  grid-row: 4/4;
+  grid-row: 9/9;
+  margin: 0.2rem;
 }
 .navn {
   grid-column: 7/11;
+  grid-row: 9/11;
+  text-align: -moz-left;
+  padding-top: 5rem;
+}
+.tegn_ned {
+  grid-column: 15/16;
+  grid-row: 11/12;
+  margin-bottom: 1rem;
+}
+.tegn_op {
+  grid-column: 1/2;
+  margin: 0.5rem;
 }
