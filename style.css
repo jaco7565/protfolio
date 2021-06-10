@@ -1,7 +1,6 @@
-* {
-  margin: 4;
-  padding: 0;
-  box-sizing: border-box;
+img {
+  display: block;
+  width: 100%;
 }
 body {
   background-color: #d1c6b9;
@@ -9,11 +8,24 @@ body {
 #alt {
   background-color: #f1edea;
 }
-
 @font-face {
   font-family: "fogtwono5";
   src: url("fonts/fogtwono5-webfont.woff2") format("woff2");
 }
+@font-face {
+  font-family: "oranienbaum";
+  src: url("fonts/oranienbaum-webfont.woff2") format("woff2");
+}
+h1 {
+  font-family: "oranienbaum", sans-serif;
+}
+/* --------------styling om meunen----------------- */
+* {
+  margin: 4;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #black_line {
   display: flex;
   place-content: center;
@@ -39,8 +51,6 @@ a {
   text-decoration: none;
 }
 header {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; */
   position: sticky;
   top: 0;
 }
@@ -102,7 +112,6 @@ header {
   /* flex-direction: column; */
   background-color: #f1edea;
   width: 100%;
-  /* border-radius: 10px; */
   text-align: center;
   transition: 0.3s;
   box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
@@ -120,4 +129,80 @@ header {
   display: block;
   cursor: pointer;
   font-size: 2.1em;
+}
+
+/* -------------forside___Mobilversion-------- 
+styldelen-------------------------------*/
+.tegn_op {
+  width: 4vw;
+  height: 2vw;
+  background-image: url(svg/pil_ned.svg);
+  background-size: cover;
+}
+.tegn_ned {
+  width: 4vw;
+  height: 2vw;
+  background-image: url(svg/pil_op.svg);
+  background-size: cover;
+}
+#gray_line {
+  display: flex;
+  place-content: center;
+}
+#gray_line .box0 {
+  width: 99%;
+  height: 2px;
+  margin-top: 0px;
+  background-color: #707070;
+}
+.headline_min {
+  font-size: 20px;
+}
+.headline_protfolio {
+  font-size: 40px;
+}
+
+/*--------- mit grid til forsiden i mobil------- */
+
+#section_forside {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#section_forside .section_wrapper {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.arabic_op {
+  grid-column: 14/16;
+}
+.headline_min {
+  grid-column: 3/5;
+  grid-row: 1/2;
+}
+.headline_protfolio {
+  grid-column: 4/9;
+  grid-row: 1/2;
+}
+.splash_billede {
+  grid-column: 2/15;
+  grid-row: 2/4;
+}
+
+.under_headline {
+  grid-column: 5/12;
+  grid-row: 3/4;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 77px;
+}
+.arabic_ned {
+  grid-column: 2/3;
+}
+#gray_line {
+  grid-column: 1/16;
+  grid-row: 4/4;
+}
+.navn {
+  grid-column: 7/11;
 }
