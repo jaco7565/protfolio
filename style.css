@@ -17,11 +17,19 @@ body {
   font-family: "oranienbaum";
   src: url("fonts/oranienbaum-webfont.woff2") format("woff2");
 }
+@font-face {
+  font-family: "crimsontext";
+  src: url("fonts/crimsontext-regular-webfont.woff2") format("woff2");
+}
 h1 {
   font-family: "oranienbaum", sans-serif;
 }
 h3 {
   font-family: "oranienbaum", sans-serif;
+}
+p {
+  font-family: "crimsontext", sans-serif;
+  /* max-width: 60ch; */
 }
 .tegn_op {
   width: 4vw;
@@ -44,6 +52,30 @@ h3 {
   height: 2px;
   margin-top: 0px;
   background-color: #707070;
+}
+.knapper a {
+  color: black;
+  font-size: 1.5rem;
+}
+.linje_1 {
+  width: 6%;
+  /* height: 0.1rem; */
+  /* margin-top: 0px;
+  background-color: #000; */
+  margin-left: 14.5rem;
+}
+.linje_2 {
+  width: 6%;
+  height: 0.1rem;
+  margin-top: 0px;
+  background-color: #000;
+  margin-left: 20.6rem;
+}
+/* .knapper :hover {
+  color: #ff9913;
+} */
+.knapper :hover {
+  transform: scaleY(10px);
 }
 /* --------------styling om meunen----------------- */
 * {
@@ -162,10 +194,10 @@ header {
 /* ----------------------forside----------------------------
  -----------------------styldelen-------------------------------*/
 
-.headline_min {
+.headline_min h1 {
   font-size: 2.1rem;
 }
-.headline_protfolio {
+.headline_protfolio h1 {
   font-size: 4rem;
 }
 
@@ -190,7 +222,6 @@ header {
   grid-column: 4/8;
   grid-row: 1/2;
   margin: 1rem;
-  /* padding-left: 1.5rem; */
 }
 .headline_protfolio {
   grid-column: 5/12;
@@ -206,8 +237,11 @@ header {
   grid-column: 5/12;
   grid-row: 7/8;
   text-align: center;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   padding-top: 3rem;
+}
+.under_headline h1 {
+  font-size: 1.5rem;
 }
 .arabic_ned {
   grid-column: 1/4;
@@ -221,10 +255,13 @@ header {
   margin: 0.2rem;
 }
 .navn {
-  grid-column: 7/11;
+  grid-column: 6/12;
   grid-row: 9/11;
   text-align: -moz-left;
   padding-top: 5rem;
+}
+.navn h3 {
+  font-size: 1rem;
 }
 .tegn_ned {
   grid-column: 15/16;
@@ -236,67 +273,71 @@ header {
   margin: 0.5rem;
 }
 /* ---------------WEB_mobil_version---------------------- */
-#section_web {
-  display: grid;
-  grid-template-columns: 1fr 24fr 1fr;
-}
-.section_wrapper {
-  grid-column: 2/3;
-}
-#section_web .section_wrapper {
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-}
-.left_top {
-  grid-column: 1/7;
-  grid-row: 1/1;
-}
-#section_web h1 {
+h1 {
   font-size: 3rem;
 }
-.left_under_top {
-  grid-column: 1/7;
-  grid-row: 1/2;
-  padding-top: 6rem;
-  font-size: 1.8rem;
+h3 {
+  font-size: 1.5rem;
 }
-#section_web .tegn_op {
-  grid-row: 1/2;
+iframe {
+  inset: 0;
+  width: auto;
+  height: auto;
+}
+
+.iframe_wrapper {
+  text-align: center;
+}
+.left_top {
+  margin: 1rem;
+  margin-bottom: -3rem;
+}
+.left_under_top {
+  margin: 1rem;
 }
 .column_left {
-  grid-column: 1/16;
-  grid-row: 2/4;
+  margin: 1rem;
 }
-.column_right {
-  display: grid;
 
-  grid-column: 1/16;
-  grid-row: 3/5;
-}
 .knapper {
   text-align: center;
+  margin: 3rem;
 }
-#section_web .arabic_op {
-  grid-column: 14/16;
-}
-#section_web .arabic_ned {
-  grid-column: 1/4;
-  grid-row: 4/8;
-  padding-top: 11rem;
-}
-#section_web .box0 {
-  grid-column: 1/16;
-  grid-row: 5/9;
-  margin: 2.2rem;
-  width: 105%;
-  margin-left: -1rem;
-}
-#section_web .navn {
-  grid-column: 1/16;
-  grid-row: 5/11;
+.navn {
   text-align: center;
+  margin: 4rem;
 }
-#section_web .tegn_ned {
-  grid-column: 15/16;
-  grid-row: 6/6;
+.navn h3 {
+  margin: -2rem;
 }
+.h1_om {
+  margin: 1rem;
+  margin-bottom: -3rem;
+}
+.text_container {
+  margin: 1rem;
+}
+.style_tegn {
+  display: none;
+}
+/* ----------animation på kanye på om mig siden på mobil version----------- */
+.kanye_alt {
+  overflow: hidden;
+}
+.kanye_container {
+  animation-name: kanye_kf;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  transition-timing-function: cubic-bezier(0, 0.58, 0.13, 1.89);
+  width: 100vh;
+}
+@keyframes kanye_kf {
+  to {
+    transform: translateX(-109.5vw);
+  }
+
+  from {
+    transform: translateX(100.5vw);
+  }
+}
+/* ------------------------- */
