@@ -37,6 +37,9 @@ p {
   font-family: "crimsontext", sans-serif;
   /* max-width: 60ch; */
 }
+h3 {
+  font-weight: inherit;
+}
 .tegn_op {
   width: 4vw;
   height: 2vw;
@@ -200,7 +203,9 @@ header {
   display: block;
   cursor: pointer;
 }
-
+.kanye_sprite h3 {
+  font-weight: inherit;
+}
 /* ----------------------forside----------------------------
  -----------------------styldelen-------------------------------*/
 #section_forside img {
@@ -243,6 +248,7 @@ h4 {
 
 #section_forside h3 {
   padding-top: 4rem;
+  font-weight: inherit;
 }
 .tegn_op {
   display: none;
@@ -366,7 +372,7 @@ iframe {
     transform: translateX(100.5vw);
   }
 }
-/* -------styling af knapper----------------------------------------------- */
+/* -------hover----------------------------------------------- */
 
 .knapper {
   border: none;
@@ -419,7 +425,6 @@ iframe {
   transition: all 500ms ease;
 }
 
-/* Bounce */
 @keyframes bounce {
   0%,
   20%,
@@ -443,6 +448,7 @@ iframe {
   animation: bounce 1s;
   background-color: #38772d6b;
 }
+
 /* -----------------700px-------------------------------------- */
 @media (min-width: 700px) {
   /* ---burger menu */
@@ -489,7 +495,7 @@ iframe {
   #section_forside .tegn_op {
     display: block;
 
-    grid-column: 1/2;
+    grid-column: 1/3;
     grid-row: 1/3;
     margin: 1rem;
   }
@@ -507,7 +513,7 @@ iframe {
   }
   #section_forside .tegn_ned {
     display: block;
-    grid-column: 16/17;
+    grid-column: 15/17;
     grid-row: 4/4;
 
     margin: 1rem;
