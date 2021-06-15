@@ -582,7 +582,7 @@ iframe {
     font-size: 1.5rem;
   }
   .left_top {
-    margin-bottom: -8rem;
+    /* margin-bottom: -8rem; */
     margin-top: -3rem;
   }
   .box_container {
